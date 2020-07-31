@@ -56,8 +56,8 @@ Public Class Form1
             Me.Close()
         End If
         If height < fascia * 0.7 Then
-            Dim fasciaMinimum As Double = fascia * 0.7
-            MessageBox.Show("The height is too low. Make it bigger than " & Math.Round([fasciaMinimum], 1) & " mm.", "Wrong dimension", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Dim fasciaMinimum As Double = (fascia * 0.7) + 0.05
+            MessageBox.Show("The height is too low. Make it higher than " & Math.Round([fasciaMinimum], 1, MidpointRounding.AwayFromZero) & " mm.", "Wrong dimension", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Me.Close()
         End If
 
@@ -142,7 +142,7 @@ Public Class Form1
         ElseIf fascia > 22.9 And fascia <= 28.5 Then
             radius1 = 2.5
             radius2 = 3.5
-        Else ' fascia >28.5
+        Else                                              ' fascia >28.5
             radius1 = 2.5
             radius2 = 5
         End If
