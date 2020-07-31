@@ -52,11 +52,12 @@ Public Class Form1
         End If
 
         If height > 50 Then
-            MessageBox.Show("Isn't the height too high? Try to split into 2.", "Wrong Dimension", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Isn't the height too high?" & vbCrLf & "Lower the height and insert a backup ring.", "Wrong Dimension", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Me.Close()
         End If
         If height < fascia * 0.7 Then
-            MessageBox.Show("The height is too low. Make it bigger than " & fascia * 0.7 & " mm.", "Wrong dimension", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Dim fasciaMinimum As Double = fascia * 0.7
+            MessageBox.Show("The height is too low. Make it bigger than " & Math.Round([fasciaMinimum], 1) & " mm.", "Wrong dimension", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Me.Close()
         End If
 
