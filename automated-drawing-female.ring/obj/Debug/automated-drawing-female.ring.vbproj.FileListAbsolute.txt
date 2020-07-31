@@ -1,0 +1,12 @@
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\bin\Debug\automated-drawing-female.ring.exe.config
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\bin\Debug\automated-drawing-female.ring.exe
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\bin\Debug\automated-drawing-female.ring.pdb
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\bin\Debug\automated-drawing-female.ring.xml
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\obj\Debug\automated-drawing-female.ring.vbprojAssemblyReference.cache
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\obj\Debug\automated_drawing_female.ring.Form1.resources
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\obj\Debug\automated_drawing_female.ring.Resources.resources
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\obj\Debug\automated-drawing-female.ring.vbproj.GenerateResource.cache
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\obj\Debug\automated-drawing-female.ring.vbproj.CoreCompileInputs.cache
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\obj\Debug\automated-drawing-female.ring.exe
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\obj\Debug\automated-drawing-female.ring.xml
+C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\obj\Debug\automated-drawing-female.ring.pdb
