@@ -76,7 +76,7 @@ Public Class Form1
         invApp = GetObject(, "Inventor.Application")
 
         '##### Open the part.'
-        invApp.Documents.Open("C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\female_ring.ipt")
+        invApp.Documents.Open("\\dataserver2019\Tecnici\CARCO\EngineeringTEAM\AUTOMATIC_CREATOR\automated-drawing-female.ring\automated-drawing-female.ring\female_ring.ipt")
 
         '##### Get the active document. This assums it's a part document.
         partDoc = invApp.ActiveDocument
@@ -244,10 +244,10 @@ Public Class Form1
         splitProp = designTrackPropSet.Item("Project")
         '##### Set the value of the property using the current value of the textbox.'
         If endless = True Then
-            splitProp.Value = "Back-up ring Endless"
+            splitProp.Value = "Female ring Endless"
         End If
         If split = True Then
-            splitProp.Value = "Back-up ring double splits"
+            splitProp.Value = "Female ring double splits"
         End If
 
         '##### Assign "Housing dimension".'
@@ -258,7 +258,7 @@ Public Class Form1
         Dim housingProp As Inventor.Property
         housingProp = inventorSummaryInfoPropSet.Item("Subject")
         '##### Set the value of the property using the current value of the textbox.'
-        housingProp.Value = internalDiameter.ToString() + "/" + textbox_externalDiameter.Text.ToString() + " * " + textbox_housingHeight.Text.ToString()
+        housingProp.Value = internalDiameter.ToString() & "/" & textbox_externalDiameter.Text.ToString() & " * " & textbox_housingHeight.Text.ToString()
 
         ' Drawing for a third party
         'If checkBox_thirdParty.Checked = True Then
@@ -273,16 +273,16 @@ Public Class Form1
         If comboBox_revision.Text = "0" Or comboBox_revision.Text = "" Then
             revision = ""
         Else
-            revision = "_rev." + comboBox_revision.Text
+            revision = "_rev." & comboBox_revision.Text
         End If
 
         '##### Save the part-document with the assigned name (drawingNumber).'
-        invApp.ActiveDocument.SaveAs("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" + drawingNumber + revision + ".ipt", False)
+        invApp.ActiveDocument.SaveAs("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" & drawingNumber & revision & ".ipt", False)
 
         '##### Replace the reference .ipt file on the drawing.'
         Dim oDoc As Inventor.DrawingDocument
-        oDoc = invApp.Documents.Open("C:\Users\minso\Documents\automated-drawing-female.ring\automated-drawing-female.ring\automated-drawing-female.ring\female_ring.idw")
-        oDoc.File.ReferencedFileDescriptors(1).ReplaceReference("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" + drawingNumber + revision + ".ipt")
+        oDoc = invApp.Documents.Open("\\dataserver2019\Tecnici\CARCO\EngineeringTEAM\AUTOMATIC_CREATOR\automated-drawing-female.ring\automated-drawing-female.ring\female_ring.idw")
+        oDoc.File.ReferencedFileDescriptors(1).ReplaceReference("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" & drawingNumber & revision & ".ipt")
 
         '##### Scale the drawing views according to the external diameter.'
         ' ##### View A'
@@ -420,7 +420,7 @@ Public Class Form1
 
 
         '##### Save the drawing-document with the assigned name (drawingNumber).'
-        invApp.ActiveDocument.SaveAs("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" + drawingNumber + revision + ".idw", False)
+        invApp.ActiveDocument.SaveAs("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" & drawingNumber & revision & ".idw", False)
 
         '##### Update the document.'
         invApp.ActiveDocument.Update
@@ -430,7 +430,7 @@ Public Class Form1
         oDoc = invApp.ActiveDocument
 
         ' Save a copy as a PDF file.
-        Call oDoc.SaveAs("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" + drawingNumber + revision + ".pdf", True)
+        Call oDoc.SaveAs("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" & drawingNumber & revision & ".pdf", True)
 
         ' Save a copy as a jpeg file.
         'Call oDoc.SaveAsBitmap("\\dataserver2019\Tecnici\CARCO\DISEGNI\TORNITURA+MODIFICHE\" + drawingNumber + ".jpg", 2303, 3258)
